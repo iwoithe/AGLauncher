@@ -11,6 +11,4 @@ ApplicationWindow {
     height: 600
     title: qsTr("AGLauncher")
     visible: true
-
-    menuBar: AGMenuBar {}
 }
