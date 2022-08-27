@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/AGLauncher/UiComponents/AGDialog.qml</file>
+        <file>qml/AGLauncher/UiComponents/AGDialogBackground.qml</file>
+        <file>qml/AGLauncher/UiComponents/AGPopup.qml</file>
+        <file>qml/AGLauncher/UiComponents/AGPopupBackground.qml</file>
+        <file>qml/AGLauncher/UiComponents/qmldir</file>
+    </qresource>
+</RCC>
