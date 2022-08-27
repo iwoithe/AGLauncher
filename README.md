@@ -1,6 +1,6 @@
 # AG Launcher
 
-A minimilistic app and game launcher targetting arcade machine controls.
+A minimalistic app and game launcher targetting arcade machine controls.
 
 ## The Name
 
