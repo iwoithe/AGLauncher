@@ -9,6 +9,6 @@ ApplicationWindow {
     id: root
     width: 800
     height: 600
-    title: qsTr("AGLauncher")
+    title: qsTr("AG Launcher")
     visible: true
 }
