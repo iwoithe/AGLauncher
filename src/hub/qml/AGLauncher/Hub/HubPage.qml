@@ -19,8 +19,13 @@ Item {
             id: agView
             anchors.fill: parent
 
-            cellWidth: 80
-            cellHeight: 80
+            property int actualWidth: 80
+            property int actualHeight: 80
+            property int gapWidth: 40
+            property int gapHeight: 20
+
+            cellWidth: actualWidth + (gapWidth * 2)
+            cellHeight: actualHeight + (gapHeight * 2)
 
             model: agStore
             delegate: AGDelegate {}

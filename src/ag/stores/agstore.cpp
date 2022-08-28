@@ -8,12 +8,18 @@ AGStore::AGStore(QObject* parent) : QAbstractListModel(parent), IStore()
     m_roles.insert(rCreator, "creator");
     m_roles.insert(rThumbnail, "thumbnail");
     m_roles.insert(rDirectoryPath, "directoryPath");
-
+    
     init();
 }
 
 void AGStore::init()
 {
+    for (int i = 0; i < 10; i++) {
+        QVariantMap newAG = QVariantMap();
+        newAG["name"] = "Kenney Platformer";
+        newAG["creator"] = "I Woithe";
+        m_ags.push_back(newAG);
+    }
 }
 
 QVariant AGStore::data(const QModelIndex& index, int role) const
