@@ -8,7 +8,7 @@ AGStore::AGStore(QObject* parent) : QAbstractListModel(parent), IStore()
     m_roles.insert(rCreator, "creator");
     m_roles.insert(rThumbnail, "thumbnail");
     m_roles.insert(rDirectoryPath, "directoryPath");
-    
+
     init();
 }
 
