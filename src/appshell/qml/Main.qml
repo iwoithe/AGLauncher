@@ -7,8 +7,8 @@ import AGLauncher.UiComponents 0.1
 
 ApplicationWindow {
     id: root
-    width: 800
-    height: 600
+    width: 400
+    height: 300
     title: qsTr("AG Launcher")
     visible: true
 }
