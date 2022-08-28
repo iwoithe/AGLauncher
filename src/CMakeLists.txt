@@ -1,4 +1,5 @@
 add_subdirectory(appshell)
 add_subdirectory(framework)
 add_subdirectory(hub)
+add_subdirectory(launch)
 add_subdirectory(main)

@@ -8,6 +8,7 @@ target_link_libraries(aglauncher PRIVATE
     appshell
     hub
     interactive
+    launch
     ui
     uicomponents
 )

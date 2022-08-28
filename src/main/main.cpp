@@ -2,6 +2,7 @@
 
 #include "appshell/appshellmodule.h"
 #include "hub/hubmodule.h"
+#include "launch/launchmodule.h"
 #include "ui/uimodule.h"
 #include "uicomponents/uicomponentsmodule.h"
 
@@ -11,6 +12,7 @@ int main(int argc, char *argv[])
 
     app.addModule(new ag::appshell::AppShellModule());
     app.addModule(new ag::hub::HubModule());
+    app.addModule(new ag::launch::LaunchModule());
     app.addModule(new ag::ui::UiModule());
     app.addModule(new ag::uicomponents::UiComponentsModule());
 
