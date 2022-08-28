@@ -1,5 +1,5 @@
-#ifndef AG_APPSHELL_HUBMODULE_H
-#define AG_APPSHELL_HUBMODULE_H
+#ifndef AG_HUB_HUBMODULE_H
+#define AG_HUB_HUBMODULE_H
 
 #include "modularity/imodulesetup.h"
 
