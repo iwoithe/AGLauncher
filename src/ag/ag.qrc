@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/AGLauncher/AG/AGDelegate.qml</file>
+        <file>qml/AGLauncher/AG/qmldir</file>
+    </qresource>
+</RCC>

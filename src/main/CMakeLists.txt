@@ -5,6 +5,7 @@ add_executable(aglauncher
 target_link_libraries(aglauncher PRIVATE
     ${QT_LIBRARIES}
     actions
+    ag
     appshell
     hub
     interactive

@@ -1,3 +1,4 @@
+add_subdirectory(ag)
 add_subdirectory(appshell)
 add_subdirectory(framework)
 add_subdirectory(hub)
