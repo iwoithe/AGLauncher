@@ -37,10 +37,6 @@ int AppShell::run(int argc, char** argv)
     const QUrl url(QStringLiteral("qrc:/qml") + "/Main.qml");
     qmlAppEngine()->load(url);
 
-    QVariantMap nameData;
-    nameData["name"] = QString("Bob");
-    dispatcher()->dispatch("set-name", nameData);
-
     int result = app.exec();
 
     qDeleteAll(m_modules);
