@@ -14,6 +14,8 @@ Component {
         Column {
             anchors.fill: parent
 
+            spacing: 10
+
             Item {
                 width: rootItem.width
                 height: rootItem.width
@@ -44,22 +46,27 @@ Component {
                 }
             }
 
-            AGLabel {
-                text: name
+            Column {
                 width: parent.width
+                spacing: 5
 
-                horizontalAlignment: Text.AlignHCenter
-            }
+                AGLabel {
+                    text: name
+                    width: parent.width
 
-            AGLabel {
-                text: creator
-                width: parent.width
+                    horizontalAlignment: Text.AlignHCenter
+                }
 
-                font.pixelSize: 6
-                color: UiTheme.fontSecondaryColor
+                AGLabel {
+                    text: creator
+                    width: parent.width
 
-                horizontalAlignment: Text.AlignHCenter
-                font.capitalization: Font.AllUppercase
+                    font.pixelSize: 6
+                    color: UiTheme.fontSecondaryColor
+
+                    horizontalAlignment: Text.AlignHCenter
+                    font.capitalization: Font.AllUppercase
+                }
             }
         }
     }
