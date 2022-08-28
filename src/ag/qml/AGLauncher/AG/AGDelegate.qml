@@ -14,7 +14,7 @@ Component {
             anchors.fill: parent
 
             AGLabel {
-                text: title
+                text: name
             }
 
             AGLabel {

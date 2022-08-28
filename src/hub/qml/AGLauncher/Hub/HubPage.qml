@@ -7,14 +7,9 @@ import AGLauncher.UiComponents 0.1
 Item {
     id: root
 
-    // ListModel {
-    //     id: agStore
-    //     ListElement {
-    //         title: "Kenney Platformer"
-    //         creator: "I Woithe"
-    //         directoryPath: "share/ag/Kenney Platformer"
-    //     }
-    // }
+    AGStore {
+        id: agStore
+    }
 
     Rectangle {
         anchors.fill: parent

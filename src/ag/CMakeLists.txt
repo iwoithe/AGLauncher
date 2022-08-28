@@ -1,6 +1,8 @@
 set(MODULE_NAME ag)
 
 set(MODULE_SRC
+    ${CMAKE_CURRENT_LIST_DIR}/stores/agstore.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/stores/agstore.h
     ${CMAKE_CURRENT_LIST_DIR}/agmodule.cpp
     ${CMAKE_CURRENT_LIST_DIR}/agmodule.h
 )

@@ -1,6 +1,7 @@
 #include <QQmlEngine>
 
 #include "agmodule.h"
+#include "stores/agstore.h"
 
 using namespace ag::ag;
 
@@ -21,4 +22,5 @@ void AGModule::registerResources()
 
 void AGModule::registerStores()
 {
+    qmlRegisterType<AGStore>("AGLauncher.AG", 0, 1, "AGStore");
 }
