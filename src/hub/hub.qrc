@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/AGLauncher/Hub/HubPage.qml</file>
+        <file>qml/AGLauncher/Hub/qmldir</file>
+    </qresource>
+</RCC>

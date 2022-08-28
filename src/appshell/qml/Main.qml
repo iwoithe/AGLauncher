@@ -3,6 +3,7 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 
 import AGLauncher.AppShell 0.1
+import AGLauncher.Hub 0.1
 import AGLauncher.UiComponents 0.1
 
 ApplicationWindow {
@@ -11,4 +12,8 @@ ApplicationWindow {
     height: 300
     title: qsTr("AG Launcher")
     visible: true
+
+    HubPage {
+        anchors.fill: parent
+    }
 }

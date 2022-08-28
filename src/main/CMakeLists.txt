@@ -6,6 +6,7 @@ target_link_libraries(aglauncher PRIVATE
     ${QT_LIBRARIES}
     actions
     appshell
+    hub
     interactive
     ui
     uicomponents
