@@ -43,8 +43,7 @@ QVariant AGStore::data(const QModelIndex& index, int role) const
             return ag["creator"];
         case rThumbnail:
             if (ag["thumbnail"] == "") {
-                // TODO: Add the placeholder thumbnail
-                return "qrc:/qml/AGLauncher/share/placeholder_thumbnail.png";
+                return "qrc:/qml/AGLauncher/AG/resources/placeholder_thumbnail.png";
             }
 
             return ag["thumbnail"];
@@ -104,7 +103,13 @@ void AGStore::load()
         QVariantMap ag;
         ag["agName"] = infoData["agName"];
         ag["creator"] = infoData["creator"];
-        ag["thumbnail"] = "file:///" + d.absoluteFilePath("thumbnail.png");
+
+        if (QFile(d.absoluteFilePath("thumbnail.png")).exists()) {
+            ag["thumbnail"] = "file:///" + d.absoluteFilePath("thumbnail.png");
+        } else {
+            ag["thumbnail"] = "";
+        }
+
         ag["directoryPath"] = d.absolutePath();
         ag["executableName"] = infoData["executableName"];
 
