@@ -43,6 +43,7 @@ QVariant AGStore::data(const QModelIndex& index, int role) const
             return ag["creator"];
         case rThumbnail:
             if (ag["thumbnail"] == "") {
+                // TODO: Add the placeholder thumbnail
                 return "qrc:/qml/AGLauncher/share/placeholder_thumbnail.png";
             }
 
