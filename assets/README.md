@@ -1,0 +1,1 @@
+This directory contains assets and media which are not used by the app.
