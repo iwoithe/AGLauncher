@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR})
+
 find_package(Qt5 COMPONENTS Core Gui Quick Widgets REQUIRED)
 set(QT_LIBRARIES
     Qt5::Core
@@ -20,3 +22,6 @@ include_directories(PUBLIC
 )
 
 add_subdirectory(src)
+
+install(TARGETS aglauncher DESTINATION ${CMAKE_BINARY_DIR})
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/share DESTINATION ${CMAKE_BINARY_DIR})

@@ -1,5 +1,7 @@
+.vscode
 bin
 builds
 install
 
-.vscode
+*.exe
+*.pck
