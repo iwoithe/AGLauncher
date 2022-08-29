@@ -74,6 +74,7 @@ Component {
                 }
 
                 AGLabel {
+                    // TODO: Is a prefix of "By " needed?
                     text: creator
                     width: parent.width
 
