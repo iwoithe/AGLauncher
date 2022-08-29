@@ -9,6 +9,7 @@ class LaunchModule : public modularity::IModuleSetup
 {
 public:
     std::string moduleName() const override;
+    void registerStores() override;
 };
 
 } // namespace ag::launch

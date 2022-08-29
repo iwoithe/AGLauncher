@@ -8,6 +8,8 @@
 #include <QJsonDocument>
 #include <QString>
 
+#include "actions/dispatcher.h"
+
 using namespace ag::ag;
 
 AGStore::AGStore(QObject* parent) : QAbstractListModel(parent), IStore()
@@ -64,6 +66,21 @@ QHash<int, QByteArray> AGStore::roleNames() const
     return m_roles;
 }
 
+int AGStore::currentIndex()
+{
+    return m_currentIndex;
+}
+
+void AGStore::setCurrentIndex(int index)
+{
+    if (m_currentIndex == index) {
+        return;
+    }
+
+    m_currentIndex = index;
+    emit currentIndexChanged();
+}
+
 void AGStore::load()
 {
     QDirIterator iter("share/ag");//, QDir::NoDotAndDotDot);
@@ -96,4 +113,6 @@ void AGStore::load()
 
 void AGStore::openCurrentAG()
 {
+    QVariantMap args = m_ags[m_currentIndex];
+    dispatcher()->dispatch("run-ag", args);
 }

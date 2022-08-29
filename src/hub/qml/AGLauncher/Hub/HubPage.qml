@@ -63,6 +63,14 @@ Item {
             model: agStore
             delegate: AGDelegate {}
             focus: true
+
+            onCurrentIndexChanged: agStore.currentIndex = agView.currentIndex
         }
+    }
+
+    // Will be moved to some C++ file somepoint
+    Shortcut {
+        sequences: ["A"]
+        onActivated: agStore.openCurrentAG()
     }
 }
