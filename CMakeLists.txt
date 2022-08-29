@@ -23,5 +23,6 @@ include_directories(PUBLIC
 
 add_subdirectory(src)
 
+# TODO: Move aglauncher executable and the required shared libraries (Qt etc.) to "bin"
 install(TARGETS aglauncher DESTINATION ${CMAKE_BINARY_DIR})
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/share DESTINATION ${CMAKE_BINARY_DIR})
