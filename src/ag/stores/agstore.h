@@ -26,12 +26,17 @@ public:
     QVariant data(const QModelIndex& index, int role) const override;
     int rowCount(const QModelIndex& parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
+
+    void load();
+    Q_INVOKABLE void openCurrentAG();
+
 private:
     enum Roles {
-        rName = Qt::UserRole + 1,
+        rAGName = Qt::UserRole + 1,
         rCreator,
         rThumbnail,
-        rDirectoryPath
+        rDirectoryPath,
+        rExecutableName
     };
 
     QHash<int, QByteArray> m_roles;

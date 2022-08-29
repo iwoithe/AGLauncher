@@ -20,23 +20,39 @@ Component {
                 width: rootItem.width
                 height: rootItem.width
 
+                Image {
+                    id: thumbnailImage
+                    width: 80
+                    height: 80
+                    source: thumbnail
+                    fillMode: Image.PreserveAspectCrop
+                    smooth: true
+                    clip: true
+
+                    layer.enabled: true
+                    layer.effect: OpacityMask {
+                        maskSource: Item {
+                            width: thumbnailImage.width
+                            height: thumbnailImage.height
+                            Rectangle {
+                                anchors.fill: parent
+                                radius: thumbnailBackground.radius
+                            }
+                        }
+                    }
+                }
+
                 Rectangle {
                     id: thumbnailBackground
                     anchors.fill: parent
                     radius: 10
-                    color: "#FFFFFF"
+                    color: thumbnail === "" ? "#FFFFFF" : "transparent"
+                    border.width: rootItem.GridView.isCurrentItem ? 2 : 0
+                    border.color: UiTheme.accentColor
                 }
 
-                // Image {
-                //     id: thumbnail
-                //     source: ""
-                //     sourceSize: Qt.size(parent.width, parent.height)
-                //     smooth: true
-                //     visible: false
-                // }
-
                 DropShadow {
-                    anchors.fill: thumbnail
+                    anchors.fill: thumbnailImage
                     horizontalOffset: 0
                     verticalOffset: 2
                     radius: 4
@@ -51,7 +67,7 @@ Component {
                 spacing: 5
 
                 AGLabel {
-                    text: name
+                    text: agName
                     width: parent.width
 
                     horizontalAlignment: Text.AlignHCenter
