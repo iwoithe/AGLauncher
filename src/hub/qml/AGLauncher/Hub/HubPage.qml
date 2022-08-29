@@ -68,7 +68,8 @@ Item {
         }
     }
 
-    // Will be moved to some C++ file somepoint
+    // TODO: Implement the C++ shortcuts
+    // FIXME: There is a segmentation fault regarding the deletion/clean up of shortcuts
     Shortcut {
         sequences: ["A"]
         onActivated: agStore.openCurrentAG()
