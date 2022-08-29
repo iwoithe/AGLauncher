@@ -22,6 +22,9 @@ public:
     void init() override;
     
     Q_INVOKABLE void runAG(QVariantMap args);
+
+private:
+    void raiseAppWindows();
 };
 } // ag::launch
 
